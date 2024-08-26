@@ -19,8 +19,6 @@ curl http://0.0.0.0:8080/required_version
 Example usage in the Flutter app:
 
 ```dart
-const kHost
-
 final dio = Dio();
 // TODO: Replace with production URL on staging / prod flavors
 const baseUrl = 'http://0.0.0.0:8080';
@@ -30,6 +28,7 @@ if (requiredVersionStr.isEmpty) {
   log('Remote Config: required_version not set. Ignoring.', name: _name);
   return false;
 }
+// TODO: Compare this with the app version from package_info_plus
 ```
 
 ## Deploying the server
